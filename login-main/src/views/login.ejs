@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .left-section {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo img {
+            max-width: 150px; /* Ajusta el tamaño máximo del logo */
+            margin-bottom: 20px; /* Espacio inferior entre el logo y el texto */
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login-form input,
+        .login-form button {
+            width: 80%; /* Ajusta el ancho de los inputs y botones */
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .login-form button {
+            background-color: #007BFF; /* Color de fondo azul */
+            color: white; /* Color del texto blanco */
+            border: none; /* Sin borde */
+            cursor: pointer; /* Cambia el cursor a pointer */
+        }
+
+        .login-form button:hover {
+            background-color: #0056b3; /* Color de fondo más oscuro al pasar el cursor */
+        }
+
+        .rec_password {
+            margin-bottom: 20px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .rec_password:hover {
+            text-decoration: underline;
+        }
+
+        .right-section {
+            width: 50%;
+            position: relative;
+        }
+
+        .right-section img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        .navigation {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+        }
+
+        .navigation a.active {
+            background: rgba(255, 255, 255, 0.5);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="logo">
+              <img src="./img/company_logo_transparent.png" alt="Gatito">
+            </div>
+            <p>¡Bienvenido! Ingresa a tu cuenta.</p>
+            <form action="/request" class="login-form" method="post">
+                <input type="email" id="email" name="email" placeholder="Correo:">
+                <input type="password" id="password" name="password" placeholder="Contraseña:">
+                <button type="submit">Acceder</button>
+                <button type="button" onclick="window.location.href='/register';">Registrarte</button>
+            </form>
+        </div>
+        <div class="right-section">
+            <img src="./img/titanic.jpg" alt="titanic">
+            <div class="navigation">
+                <a href="/" class="active">Inicio</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
